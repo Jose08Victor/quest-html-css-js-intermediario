@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+.conteudo-principal {
+    font-size: 15px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/bg-repeat.jpg) repeat-x;
+    background-size: contain;
+}
+
+.conteudo-principal .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.conteudo-principal .conteudo .duvida {
+    width: 300px;
+    color: #fff;
+}
+
+.conteudo-principal .conteudo .duvida .titulo {
+    font-size: 20px;
+    margin-bottom: 11px;
+}
+
+.conteudo-principal .conteudo .formulario {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-principal .conteudo .formulario .input input,
+.conteudo-principal .conteudo .formulario .input textarea {
+    width: 298px;
+    height: 35px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.conteudo-principal .conteudo .formulario .input span {
+    display: block;
+    color: #F52E2E;
+    font-size: 10px;
+    margin-bottom: 6px;
+    visibility: hidden;
+}
+
+.conteudo-principal .conteudo .formulario .input textarea {
+    height: 100px;
+}
+
+.conteudo-principal .conteudo .formulario .input input::placeholder,
+.conteudo-principal .conteudo .formulario .input textarea::placeholder {
+    font-weight: 700;
+    color: #A8A8A8;
+}
+
+.conteudo-principal .conteudo .formulario .obrigatorio {
+    margin-bottom: 20px;
+}
+
+.conteudo-principal .conteudo .formulario .enviar {
+    color: #fff;
+    background-color: #3CCC87;
+    font-weight: 700;
+    border-radius: 5px;
+    height: 41px;
+    border: none;
+    cursor: pointer;
+}
+
+.conteudo-principal .conteudo .formulario .input.valid input,
+.conteudo-principal .conteudo .formulario .input.valid textarea {
+    border: #3CCC87 solid 1px;
+}
+
+.conteudo-principal .conteudo .formulario .input.invalid input,
+.conteudo-principal .conteudo .formulario .input.invalid textarea {
+    border: #F52E2E solid 1px;
+}
+
+.conteudo-principal .conteudo .formulario .input.invalid span {
+    visibility: visible;
+}
+
+@media(max-width: 360px) {
+    .conteudo-principal .conteudo {
+        gap: 20px;
+    }
+
+    .conteudo-principal .conteudo .duvida {
+        text-align: center;
+    }
+
+    .conteudo-principal .conteudo .formulario .input input,
+    .conteudo-principal .conteudo .formulario .input textarea {
+        width: 255px;
+    }
+}

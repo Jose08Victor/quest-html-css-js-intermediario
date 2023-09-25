@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest: Criar um formulário com validação</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <main class="conteudo-principal">
+        <section class="conteudo">
+            <div class="duvida">
+                <h1 class="titulo">FICOU COM DÚVIDA?
+                    <br>NOS MANDE UMA MENSAGEM!
+                </h1>
+
+                <p class="texto">
+                    caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de 24h.
+                </p>
+            </div>
+
+            <form class="formulario">
+                <div class="input nome">
+                    <input type="text" id="nome" placeholder="Nome completo *">
+
+                    <span>campo obrigatório</span>
+                </div>
+
+                <div class="input email">
+                    <input type="email" id="email" placeholder="Email *">
+
+                    <span>campo obrigatório</span>
+                </div>
+
+                <div class="input telefone">
+                    <input type="tel" id="telefone" placeholder="Telefone *" pattern="[0-9]{9}" maxlength="9">
+
+                    <span>campo obrigatório</span>
+                </div>
+
+                <div class="input mensagem">
+                    <textarea id="mensagem" cols="30" rows="10" placeholder="Mensagem *"></textarea>
+
+                    <span>campo obrigatório</span>
+                </div>
+
+                <p class="obrigatorio">*campos obrigatórios</p>
+
+                <button type="submit" class="enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="src/js/formulario.js"></script>
+</body>
+
+</html>
