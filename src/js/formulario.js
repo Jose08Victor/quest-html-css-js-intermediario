@@ -1,31 +1,16 @@
-const form = document.querySelector(".formulario");
-const input = document.querySelectorAll(".input");
-const nome = document.getElementById("nome");
-const email = document.getElementById("email");
-const telefone = document.getElementById("telefone");
-const mensagem = document.getElementById("mensagem");
+const formulario = document.querySelector(".formulario");
+const camposDoFormulario = document.querySelectorAll(".input");
 
-
-form.addEventListener("submit", (e) => {
+formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    for (let i = 0; i < input.length; i++) {
-
-        if (nome.value === "" && input[i].classList.contains("nome")) {
-            input[i].classList.remove("valid");
-            input[i].classList.add("invalid");
-        } else if (email.value === "" && input[i].classList.contains("email")) {
-            input[i].classList.remove("valid");
-            input[i].classList.add("invalid");
-        } else if (telefone.value === "" && input[i].classList.contains("telefone")) {
-            input[i].classList.remove("valid");
-            input[i].classList.add("invalid");
-        } else if (mensagem.value === "" && input[i].classList.contains("mensagem")) {
-            input[i].classList.remove("valid");
-            input[i].classList.add("invalid");
+    camposDoFormulario.forEach((input) => {
+        if (input.children[0].value) {
+            input.classList.remove("invalid");
+            input.classList.add("valid");
         } else {
-            input[i].classList.remove("invalid");
-            input[i].classList.add("valid");
+            input.classList.remove("valid");
+            input.classList.add("invalid");
         }
-    }
+    });
 });

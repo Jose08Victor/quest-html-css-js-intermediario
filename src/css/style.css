@@ -54,6 +54,7 @@
 
 .conteudo-principal .conteudo .formulario .input textarea {
     height: 100px;
+    resize: none;
 }
 
 .conteudo-principal .conteudo .formulario .input input::placeholder,
